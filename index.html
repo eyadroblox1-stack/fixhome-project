@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز الصيانة المعتمد</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1><i class="fas fa-tools gear-spin"></i> المركز الأول لصيانة الأجهزة المنزلية بمصر</h1>
+        <p>خبراء في صيانة الغسالات، التكييفات، والثلاجات بأعلى جودة وأسرع وقت.</p>
+    </header>
+
+    <section class="services-section">
+        <h2 class="section-title">إحنا بنصلح إيه؟ 🛠️</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=500&auto=format&fit=crop" alt="صيانة تكييفات">
+                <h3>صيانة التكييفات ❄️</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> شحن فريون بالضمان</li>
+                    <li><i class="fas fa-check-circle"></i> تغيير كباسات ومواتير</li>
+                    <li><i class="fas fa-check-circle"></i> حل مشاكل تسريب المياه</li>
+                    <li><i class="fas fa-check-circle"></i> تنظيف وغسيل الوحدة الداخلية والخارجية</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?q=80&w=500&auto=format&fit=crop" alt="صيانة ثلاجات">
+                <h3>صيانة الثلاجات 🧊</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> تغيير موتور (كباس) أصلي</li>
+                    <li><i class="fas fa-check-circle"></i> إصلاح تسريب الغاز وشحن فريون</li>
+                    <li><i class="fas fa-check-circle"></i> حل مشاكل ضعف التبريد أو التجميد</li>
+                    <li><i class="fas fa-check-circle"></i> تغيير ثرموستات أو تايمر</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=500&auto=format&fit=crop" alt="صيانة غسالات">
+                <h3>صيانة الغسالات 🧺</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> تغيير رومان بلي وأولسيه</li>
+                    <li><i class="fas fa-check-circle"></i> إصلاح وتغيير الكارتة الإلكترونية</li>
+                    <li><i class="fas fa-check-circle"></i> حل مشكلة عدم طرد المياه (تغيير طلمبة)</li>
+                    <li><i class="fas fa-check-circle"></i> صيانة مواتير الغسالات الفول أوتوماتيك</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <div class="booking-container fade-in-down">
+          <h2>احجز موعد صيانة الآن ⏱️</h2>
+          
+          <div class="form-group animation-delay-1">
+            <label>1. إيه الجهاز اللي محتاج صيانة؟</label>
+            <select id="device-type" onchange="updateBrands(); checkForm();">
+              <option value="" disabled selected>اختار الجهاز...</option>
+              <option value="washing-machine">غسالة</option>
+              <option value="ac">تكييف</option>
+              <option value="fridge">ثلاجة</option>
+            </select>
+          </div>
+
+          <div class="form-group brand-group animation-delay-2" id="brand-group">
+            <label>2. ماركة الجهاز إيه؟</label>
+            <select id="brand-type" onchange="checkForm();"></select>
+          </div>
+
+          <div class="form-group animation-delay-3">
+            <label>3. ساكن فين؟ (مصر 🇪🇬)</label>
+            <select id="location" onchange="checkForm();">
+              <option value="" disabled selected>اختار المحافظة...</option>
+              <option value="cairo">القاهرة</option>
+              <option value="giza">الجيزة</option>
+              <option value="alexandria">الإسكندرية</option>
+              <option value="qalyubia">القليوبية</option>
+              <option value="dakahlia">الدقهلية</option>
+              <option value="sharqia">الشرقية</option>
+              <option value="monufia">المنوفية</option>
+              <option value="gharbia">الغربية</option>
+              <option value="kafr-el-sheikh">كفر الشيخ</option>
+              <option value="beheira">البحيرة</option>
+              <option value="damietta">دمياط</option>
+              <option value="ismailia">الإسماعيلية</option>
+              <option value="port-said">بورسعيد</option>
+              <option value="suez">السويس</option>
+              <option value="matrouh">مطروح</option>
+              <option value="north-sinai">شمال سيناء</option>
+              <option value="south-sinai">جنوب سيناء</option>
+              <option value="fayoum">الفيوم</option>
+              <option value="beni-suef">بني سويف</option>
+              <option value="minya">المنيا</option>
+              <option value="assiut">أسيوط</option>
+              <option value="sohag">سوهاج</option>
+              <option value="qena">قنا</option>
+              <option value="luxor">الأقصر</option>
+              <option value="aswan">أسوان</option>
+              <option value="red-sea">البحر الأحمر</option>
+              <option value="new-valley">الوادي الجديد</option>
+            </select>
+          </div>
+
+          <div id="submit-area" style="max-height: 0; overflow: hidden; transition: all 0.5s ease; opacity: 0; margin-top: 20px; text-align: center;">
+            <button class="call-btn pulse-animation" onclick="sendOrder()">
+              <i class="fas fa-paper-plane"></i> إرسال الطلب الآن
+            </button>
+          </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

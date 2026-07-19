@@ -1,0 +1,91 @@
+/* إعدادات عامة للصفحة */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #4caf50 0%, #1b5e20 100%);
+  background-attachment: fixed;
+  direction: rtl; 
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* تصميم الهيدر */
+.main-header {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.main-header h1 { margin: 0 0 15px 0; font-size: 2.5rem; }
+.main-header p { font-size: 1.2rem; margin: 0; opacity: 0.9; }
+
+/* تصميم قسم الخدمات */
+.services-section { padding: 50px 20px; max-width: 1200px; margin: 0 auto; }
+.section-title { text-align: center; color: #ffffff; font-size: 2rem; margin-bottom: 40px; }
+.services-grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+
+/* كروت الخدمات */
+.service-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  color: #333;
+}
+.service-card:hover { transform: translateY(-10px); }
+.service-card img { width: 100%; height: 220px; object-fit: cover; }
+.service-card h3 { color: #2e7d32; text-align: center; margin: 20px 0 10px; }
+.service-card ul { list-style: none; padding: 0 20px 25px 20px; margin: 0; }
+.service-card ul li { margin-bottom: 12px; font-size: 1rem; color: #555; display: flex; align-items: center; gap: 10px; }
+
+/* تصميم قسم الحجز */
+.booking-section { padding: 60px 20px; display: flex; justify-content: center; }
+.booking-container { background-color: white; padding: 40px 30px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); width: 100%; max-width: 500px; color: #333; }
+.booking-container h2 { text-align: center; color: #1b5e20; margin-bottom: 30px; }
+.form-group { margin-bottom: 25px; }
+label { display: block; margin-bottom: 10px; color: #2e7d32; font-weight: bold; }
+select { width: 100%; padding: 14px 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; background-color: #f8fafc; color: #333; cursor: pointer; }
+
+/* زرار الإرسال */
+.call-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  background-color: #25d366; color: white; border-radius: 50px; padding: 18px 25px;
+  border: none; width: 100%; cursor: pointer; font-size: 20px; font-weight: bold;
+}
+
+/* تنسيق زر الاتصال الجديد (الإضافة) */
+.call-btn-final {
+  display: none;
+  opacity: 0;
+  margin-top: 20px;
+  padding: 18px 25px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: opacity 1s ease-in-out;
+  border: none;
+}
+
+.show-call {
+  display: block !important;
+  opacity: 1 !important;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* الانيميشن */
+@keyframes gearSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.gear-spin { display: inline-block; animation: gearSpin 4s linear infinite; }
+.pulse-animation { animation: pulse 2s infinite; }
+.brand-group { max-height: 0; overflow: hidden; transition: all 0.5s ease-in-out; opacity: 0; }
+.brand-group.show { max-height: 100px; margin-bottom: 25px; opacity: 1; }
